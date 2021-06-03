@@ -306,7 +306,7 @@ async function getToken(name) {
 
 async function enterPasscode(err) {
     const webView = new WebView();
-    await webView.loadHTML(`<html><head><style>body{zoom: 3;}</style></head><body><p>${err}</p><span>Password: </span><input type="password" id="passcode"><br><a href="javascript:stop = true;">Close</a></body></html>`);
+    await webView.loadHTML(`<html><head><style>body{zoom: 3;}</style></head><body><p>${err}</p><span>Authy Password: </span><input type="password" id="passcode"><br><a href="javascript:stop = true;">Close</a></body></html>`);
     await webView.evaluateJavaScript(`
         log('Load enterPasscode website');
         let stop = false;`, false)
